@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 34px;
+    box-shadow: 0px 0px 30px 10px lightgray;
+    border-radius: 25px;
+}
+
+
+nav{
+    box-sizing: border-box;
+    height: 7vh;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cc00cc;
+    border-radius: 25px 25px 0px 0px;
+}
+nav ul{
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li{
+    font-size: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.AppName{
+    font-size:x-large;
+    font-weight: bolder;
+}
+
+main{
+    padding: 25px;
+    height: calc(100vh - 20vh);
+    border-radius:0px 0px 25px 25px ;
+}
+
+.chatArea{
+    padding: 10px;
+    overflow-y: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 45%;
+}
+
+.mainMessage{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 3px lightgray;
+}
+
+.senderReceiver{
+    font-weight: 600;
+}
+
+.incoming{
+    align-self: flex-start;
+}
+.outgoing{
+    align-self: flex-end;
+}
+
+.incoming .mainMessage{
+    color: white;
+    background-color: #cc00cc;
+}
+
+.outgoing .mainMessage{
+    border: 1px solid lightgray;
+    color: black;
+    background-color: white;
+}
+
+.alertMessage{
+    background-color: lightgray;
+    align-self: center;
+    padding:3px 5px;
+    border-radius: 5px;
+}
+
+.sendMessages{
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    height: 10%;
+    width: 100%;
+}
+
+
+#sendMessageTextArea{
+    font-size: 20px;
+    padding: 10px;
+    resize: none;
+    width: 90%;
+    border-radius: 25px;
+    height: 35%;
+    max-height: 25vh;
+}
+
+#sendMessageButton{
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    background-color: #cc00cc;
+    border-radius: 25px;
+    border: none;
+    transition: .5s all ease;
+}
+#sendMessageButton:hover{
+    background-color: #bb00bb;
+}
+
+.separator{
+    margin: 2px;
+    height: 2px;
+    width: 100%;
+    background-color: lightgray;
+}
+
+
+@media screen and (max-width:500px) {
+    body{
+        margin: 18px;
+    }
+    #sendMessageTextArea{
+        font-size: 16px;
+    }
+
+    #sendMessageButton{
+        font-size: 20px;
+    }
+    .mainMessage{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .message{
+        max-width: 55%;
+    }
+}
